@@ -1,0 +1,31 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.dashboard-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+  padding: 0 20px 20px;
+}
+
+.dashboard-main {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 150px);
+  gap: 20px;
+}
+
+@media (min-width: 1200px) {
+  .dashboard-main {
+    flex-direction: row;
+  }
+
+  .dashboard-main > * {
+    width: 50%;
+  }
+} 
