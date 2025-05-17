@@ -11,10 +11,6 @@ const Dashboard: React.FC = () => {
       <Header />
       <main className="dashboard-content">
         <TabNavigation />
-        <div className="dashboard-main">
-          <CameraView />
-          <MonitorGrid />
-        </div>
       </main>
     </div>
   );

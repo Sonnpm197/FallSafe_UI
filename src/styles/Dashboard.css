@@ -25,7 +25,11 @@
     flex-direction: row;
   }
 
-  .dashboard-main > * {
-    width: 50%;
+  .dashboard-main > *:first-child {
+    width: 60%;
   }
-} 
+
+  .dashboard-main > *:nth-child(2) {
+    width: 40%;
+  }
+}

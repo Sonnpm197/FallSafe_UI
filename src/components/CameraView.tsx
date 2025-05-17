@@ -1,5 +1,7 @@
 import React from 'react';
 import '../styles/CameraView.css';
+import VideoUpload from "./VideoUpload";
+import VideoStreaming from "./VideoStreaming";
 
 const CameraView: React.FC = () => {
   // Normally this would be fetched from an API
@@ -12,9 +14,9 @@ const CameraView: React.FC = () => {
   return (
     <div className="camera-view-container">
       <div className="camera-view">
-        <img 
-          src="/big1.jpeg" 
-          alt="Camera view of monitoring area" 
+        <img
+          src="/big1.jpeg"
+          alt="Camera view of monitoring area"
           className="camera-feed"
         />
       </div>
@@ -30,7 +32,12 @@ const CameraView: React.FC = () => {
           <h4>Detail description:</h4>
           <p>{monitorData.description}</p>
         </div>
+
+
       </div>
+
+      {/*<VideoUpload/>*/}
+      {/*<VideoStreaming/>*/}
     </div>
   );
 };
