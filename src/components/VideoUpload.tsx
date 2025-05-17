@@ -29,7 +29,7 @@ const VideoUpload: React.FC = () => {
 
     return (
         <div className="p-4 border rounded shadow w-full max-w-md mx-auto">
-            {/*<h2 className="text-lg font-bold mb-2">Upload a Video for Processing</h2>*/}
+            <h2 className="text-lg font-bold mb-2">Upload a Video for Processing</h2>
             <input
                 type="file"
                 accept="video/*"

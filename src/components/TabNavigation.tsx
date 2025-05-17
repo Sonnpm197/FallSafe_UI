@@ -7,12 +7,11 @@ import VideoStreaming from "./VideoStreaming";
 import Settings from "./Settings";
 
 const TabNavigation: React.FC = () => {
-    const [activeTab, setActiveTab] = useState<string>('fallDetection');
+    const [activeTab, setActiveTab] = useState<string>('home');
     const [fallDetected, setFallDetected] = React.useState(false);
 
     const tabs = [
         {id: 'home', label: 'Home Page'},
-        // {id: 'upload', label: 'Video Uploading'},
         {id: 'live', label: 'Video Streaming'},
         {id: 'settings', label: 'Settings / Utility'}
     ];

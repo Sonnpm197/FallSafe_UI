@@ -20,6 +20,8 @@ const VideoStreaming: React.FC<VideoStreamingProps> = ({ onFallConfirmed, onFall
     const [fallConfirmTimeMs, setFallConfirmTimeMs] = useState(1000);
 
     useEffect(() => {
+        // restart the state
+        onFallEnded();
         const storedSeconds = localStorage.getItem("notifySeconds");
         if (storedSeconds) {
             const seconds = parseInt(storedSeconds, 10);
@@ -66,7 +68,10 @@ const VideoStreaming: React.FC<VideoStreamingProps> = ({ onFallConfirmed, onFall
 
             socketRef.current.onmessage = (event) => {
                 const data = JSON.parse(event.data);
+
+                // set fall detected here
                 handleFallDetected(data.fall);
+
                 setStatus(data.fall ? "Fall Detected!" : "No Fall");
 
                 if (data.frame) {
@@ -145,10 +150,6 @@ const VideoStreaming: React.FC<VideoStreamingProps> = ({ onFallConfirmed, onFall
             <div>
                 <video ref={videoRef} style={{ width: '100%', display: "none" }} />
                 <canvas ref={canvasRef} style={{ width: '100%', display: "none" }} />
-
-                {/*<div className="mt-2 text-sm">*/}
-                {/*    <strong>Status:</strong> {status}*/}
-                {/*</div>*/}
 
                 {processedFrame && (
                     <div className="mt-4">
