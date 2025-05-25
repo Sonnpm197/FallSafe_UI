@@ -63,8 +63,9 @@ const MonitorGrid: React.FC<MonitorGridProps> = ({personFallen}) => {
 
           <div>
               {personFallen ? (
-                  <div style={{color: "red", fontWeight: "800", fontSize: "24px"}}>
-                      ⚠️ Person Fallen Detected!
+                  <div style={{color: "red", fontWeight: "800", fontSize: "40px"}}>
+                      <p>⚠️ PEOPLE FALLEN DETECTED.</p>
+                      <p>⚠️ PLEASE CHECK MANUALLY!</p>
                   </div>
               ) : (
                   <div style={{fontSize: "18px", fontWeight: "600", color: "#4B5563"}}>
